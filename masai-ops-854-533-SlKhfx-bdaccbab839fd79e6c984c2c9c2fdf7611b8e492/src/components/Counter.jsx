@@ -3,7 +3,13 @@ import React,{useState} from 'react'
 function Counter() {
     const [count, setCount] = useState(0);
     const handlecount = (num)=>{
-        setCount(count+num);
+        
+        setCount((prev)=>{
+            let curr = prev+num;
+            console.log(curr)
+            return curr;
+        });
+        
     }
   return (
     <div>
